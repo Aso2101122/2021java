@@ -1,12 +1,12 @@
 import java.util.*;
 
 public class Ship {
-    private int x;
-    private int y;
-    private int hp;
+    private int x; //船のx座標
+    private int y; //船のy座標
+    private int hp; //船のhp
     
 
-    public Ship() {
+    public Ship() { //船を配置
         Random x = new Random();
         this.x = x.nextInt(5);
         Random y = new Random();

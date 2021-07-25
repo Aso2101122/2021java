@@ -23,11 +23,11 @@ public class Game {
                 if(shipStorage[i] != null){  //沈没していない時
                     Ship ship = shipStorage[i]; //選択中の船
                     int result = ship.judgmentShip(bombX-1,bombY-1); //爆弾の船の命中判定
-                    if(result == 0){
-                        hitBomb(ship,i); //命中した時
-                    }else if(result == 1){
+                    if(result == 0){//命中した時
+                        hitBomb(ship,i); 
+                    }else if(result == 1){//波高しの時
                         System.out.printf("船%d：%s\n",i+1,"波高し");
-                    }else{
+                    }else if(result == 2){ //外れたとき
                         System.out.printf("船%d：%s\n",i+1,"はずれ");
                     }
                 }
